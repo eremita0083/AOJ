@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class Volume100_4 {
+public class Volume10004 {
 
 	public static void main(String[] args) throws IOException{
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

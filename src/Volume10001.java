@@ -1,4 +1,4 @@
-public class Volume100_1 {
+public class Volume10001 {
 
 	public static void main(String[] args) {
 		final int inputInt = new java.util.Scanner(System.in).nextInt();

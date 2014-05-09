@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Volume100_12 {
+public class Volume10012 {
 	private static final BufferedReader M_READER = new BufferedReader(
 			new InputStreamReader(System.in));
 	private static final String CELL = "#";

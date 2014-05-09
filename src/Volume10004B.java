@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class Volume100_04B {
+public class Volume10004B {
 	private final static int COUNT = 3;
 
 	public static void main(String[] args) throws IOException {

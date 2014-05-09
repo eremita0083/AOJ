@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Volume100_2 {
+public class Volume10002 {
 
 	public static void main(String[] args) throws IOException {
 		java.io.BufferedReader reader = new java.io.BufferedReader(

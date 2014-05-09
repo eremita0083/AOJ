@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Volume100_14 {
+public class Volume10014 {
 	private static final BufferedReader READER = new BufferedReader(
 			new InputStreamReader(System.in));
 	private static final char CELL = '#';
@@ -32,7 +32,7 @@ public class Volume100_14 {
 				} else {
 					char[] line = new char[width];
 					for (int j = 0; j < width; j++) {
-						if ((i == 0 && j == 0) || j % 2 == 0) {
+						if (j % 2 == 0) {
 							line[j] = POINT;
 						} else {
 							line[j] = CELL;

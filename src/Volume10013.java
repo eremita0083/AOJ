@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Volume100_13 {
+public class Volume10013 {
 	private static final BufferedReader READER = new BufferedReader(
 			new InputStreamReader(System.in));
 	private static final char CELL = '#';
