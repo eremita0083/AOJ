@@ -11,7 +11,7 @@ public class Volume10011B {
 		String[] array = reader.readLine().split(" ");
 		for(int i = array.length-1; i >= 0 ; i--){
 			if(i == 0) {
-				System.out.print(array[i]); 
+				System.out.print(array[i]);
 			}else{
 				System.out.print(array[i]+" ");
 			}
