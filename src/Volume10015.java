@@ -1,41 +1,28 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class Volume10015 {
-	private static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
-	private static final String SPADE = "S";
-	private static final String HEART = "H";
-	private static final String CLUB = "C";
-	private static final String DAIA = "D";
+	private static final String[] ARCANA = { "S", "H", "C", "D" };
 
 	public static void main(String[] args) throws IOException {
-		int count = Integer.parseInt(READER.readLine().split(" ")[0]);
-		List<String> input = new ArrayList<String>();
-		for(int i = 0; i < count ; i++){
-			input.add(READER.readLine());
+		Scanner scan = new Scanner(System.in); //Scannerでもいけるやん
+		boolean cards[][] = new boolean[4][13];
+		int n = scan.nextInt();
+		for (int i = 0; i < n ; i++) {
+			String mark = scan.next();
+			int number = scan.nextInt();
+			for (int j = 0; j < ARCANA.length; j++) {
+				if (mark.equals(ARCANA[j])) {
+					cards[j][number - 1] = true; //カードが存在するデータにはtrueを、そうでないデータにはdefaultでfalseを
+				}
+			}
 		}
-		List<String> correct = new ArrayList<String>();
-		for(int i = 0; i < 13 ; i++){
-			correct.add(SPADE+" "+(i+1));
-		}
-		for(int i = 0; i < 13 ; i++){
-			correct.add(HEART+" "+(i+1));
-		}
-		for(int i = 0; i < 13 ; i++){
-			correct.add(CLUB+" "+(i+1));
-		}
-		for(int i = 0; i < 13 ; i++){
-			correct.add(DAIA+" "+(i+1));
-		}
-		for(int i = 0; i < input.size() ; i++){
-			correct.remove(input.get(i));
-		}
-		for(String str: correct){
-			System.out.println(str);
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 13; j++) {
+				if (!cards[i][j]) {
+					System.out.println(ARCANA[i] + " " + (j + 1)); //falseのデータだけ表示する
+				}
+			}
 		}
 	}
-
 }
