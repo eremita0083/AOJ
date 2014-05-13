@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Volume10021 {
@@ -6,18 +9,24 @@ public class Volume10021 {
 		Scanner scan = new Scanner(System.in);
 		int count = Integer.parseInt(scan.nextLine());
 		String top = scan.nextLine();
-		
-		for (int i = 0; i < count-1; i++) {
+		List<String> list = new ArrayList<String>();
+		list.add(top);
+		/* for (int i = 0; i < count-1; i++) {
 			String str = scan.nextLine();
 			if(top.compareTo(str)>0){
 				top = str;
 			}
 		}
+		System.out.println(top);*/
+		for (int i = 0; i < count-1; i++) {
+			String str = scan.nextLine();
+			list.add(str);
+		}
+		System.out.println(Collections.min(list,null));
 		/*for (int i = 0; i < count-1; i++) {
 			String input = scan.nextLine();
 			top = calc(0, top, input);
 		}*/
-		System.out.println(top);
 	}
 
 	public static String calc(int count, String top, String input) {
@@ -41,7 +50,5 @@ public class Volume10021 {
 			}
 			return calc(count + 1, top, input);
 		}
-
 	}
-
 }
