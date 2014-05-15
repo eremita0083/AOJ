@@ -9,10 +9,10 @@ public class Volume10025 {
 		double b = scan.nextDouble();
 		double c = scan.nextDouble();
 		double d, s, l, h;
-		d =  Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) - 2 * a * b * Math.cos(Math.toRadians(c)));
+		d =  Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) - 2 * a * b * Math.cos(Math.toRadians(c))); //余弦定理
 		l = a + b + d;
 		double helon = l / 2;
-		s = Math.sqrt(helon * (helon - a) * (helon - b) * (helon - d)); 
+		s = Math.sqrt(helon * (helon - a) * (helon - b) * (helon - d));  // helon
 //		s = (a*b*Math.sin(Math.toRadians(c)))/2;
 		h = s * 2 / a; 
 		System.out.println(s);
