@@ -1,6 +1,4 @@
-import java.math.BigDecimal;
 import java.util.Scanner;
-
 
 public class Volume0007 {
 
@@ -11,7 +9,6 @@ public class Volume0007 {
 		for(int i = 0 ; i < weeks ; i++){
 			debt *= 1.05;
 			int a = debt % 1000;
-			System.out.println(a);
 			if(a > 0){
 				debt -= a;
 				debt += 1000;
