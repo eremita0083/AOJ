@@ -14,9 +14,8 @@ public class Volume0001 {
 			mts.add(Integer.parseInt(reader.readLine()));
 		}
 		Collections.sort(mts);
-		for(int i = mts.size()-1 ; i >= mts.size() -4 ; --i){
+		for(int i = mts.size()-1 ; i >= mts.size() -3 ; --i){
 			System.out.println(mts.get(i));
 		}
 	}
-
 }
