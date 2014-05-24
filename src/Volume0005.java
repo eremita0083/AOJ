@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Volume0005 {
@@ -18,26 +16,25 @@ public class Volume0005 {
 	 */
 
 	public static void main(String[] args) throws IOException{
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			String[] line = reader.readLine().split(" ");
-			int a = Integer.parseInt(line[0]);
-			int b = Integer.parseInt(line[1]);
-			int max = Math.max(a, b);
-			int min = Math.min(a, b);
-			System.out.println(min+ "です");
-
-	}
-
-	public static int calc(int max, int min) {
-		while (max != min) {
-			int c = max - min;
-			if (c > min) {
-				calc(c, min);
-			} else {
-				calc(min, c);
-			}
+		Scanner s = new Scanner(System.in);
+		while (s.hasNext()) {
+			int a = s.nextInt();
+			int b = s.nextInt();
+			int x = gcd(a, b);
+			int y = a / x * b; // 掛ける順番に注意(a * b を先に行うとオーバーフローする)
+			System.out.println(x + " " + y);
 		}
-		return max;
 	}
 
+	public static int gcd(int m, int n) {
+		if (m < n) {
+			int k = m;
+			m = n;
+			n = k;
+		}
+		if (n == 0) {
+			return m;
+		}
+		return gcd(n, m % n);
+	}
 }
