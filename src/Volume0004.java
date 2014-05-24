@@ -1,21 +1,21 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Volume0004 {
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader reader = new BufferedReader(new InputStreamReader(
-				System.in));
-		String[] strs = reader.readLine().split(" ");
-		double[] n = new double[strs.length];
-		for (int i = 0; i < n.length; i++) {
-			n[i] = Double.parseDouble(strs[i]);
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		while (s.hasNext()) {
+			int a, b, c, d, e, f;
+			a = s.nextInt();
+			b = s.nextInt();
+			c = s.nextInt();
+			d = s.nextInt();
+			e = s.nextInt();
+			f = s.nextInt();
+			double x = (double)(c * e - b * f) / (a * e - b * d);
+			double y = (double)(c * d - a * f) / (b * d - a * e);
+			System.out.printf("%.3f %.3f\n", x, y);
 		}
-		double a = n[2] * n[4] - n[1] * n[5];
-		double x = (n[4] * n[0] - n[1] * n[3]) /a;
-		double y = (n[2] - n[0] * x) / n[1];
-		System.out.printf("%.3f %.3f",x,y);
 	}
 
 }
