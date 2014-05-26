@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 
 public class Volume0015 {
 
@@ -13,9 +14,14 @@ public class Volume0015 {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(reader.readLine());
 		for(int i = 0 ; i < n ; i++){
-			long inputs1 = Long.parseLong(reader.readLine());
-			long inputs2 = Long.parseLong(reader.readLine());
-			System.out.println( inputs1 + inputs2);
+			BigInteger inputs1 = new BigInteger(reader.readLine());
+			BigInteger inputs2 = new BigInteger(reader.readLine());
+			BigInteger sum = inputs1.add(inputs2);
+			if(sum.toString().length() > 80 || inputs1.toString().length() > 80 || inputs2.toString().length() > 80){
+				System.out.println("overflow");
+			}else{
+				System.out.println(sum);
+			}
 		}
 	}
 
