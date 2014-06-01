@@ -12,18 +12,12 @@ public class Volume0018 {
 			list.add(scan.nextInt());
 		}
 		Collections.sort(list);
-		for(int i = 0 ; i < 5 / 2 ; i++){
-			int x = list.get(i);
-			list.set(i, list.get(list.size() - (i+1)));
-			list.set(list.size() - (i+1), x);
-		}
+		Collections.reverse(list);
 		for(int i = 0 ; i < list.size() ; i++ ){
-			if(i == list.size()-1){
-				System.out.printf("%d\n",list.get(i));
-				break;
-			}
-			System.out.printf("%d ", list.get(i));
+			if(i != 0) System.out.print(" ");
+			System.out.print(list.get(i));
 		}
+		System.out.println("");
 	}
 
 }
