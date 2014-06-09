@@ -17,7 +17,7 @@ public class Volume0016 {
 			if (distance == 0 && angle == 0) break;
 			x += distance * Math.sin(radian);
 			y += distance * Math.cos(radian);
-	        	radian += Math.toRadians(angle);
+	        radian += Math.toRadians(angle);
 		}
 		System.out.println((int)x);
 		System.out.println((int)y);
